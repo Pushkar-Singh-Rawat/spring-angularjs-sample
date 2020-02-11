@@ -20,7 +20,7 @@
   }
   h2 {
     font-size: 24px;
-    text-transform: uppercase;
+    text-transform: inherit;
     color: #303030;
     font-weight: 600;
     margin-bottom: 30px;
@@ -122,7 +122,7 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color: #f4511e;
+    background-color: #231f48;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -212,8 +212,8 @@
   </style>
 </head>
 <body id="myPage" ng-cloak="" data-spy="scroll" data-target=".navbar" data-offset="60"  ng-app="app" ng-controller="controllermodule" >
-<div id="myDiv" ng-show="loader">
-<img alt="" src="/show_loader.gif">
+<div id="myDiv" ng-show="loader" class="">
+<img alt="" src="/show_loader.gif" >
 </div>
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
@@ -223,7 +223,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">My App</a>
+      <a class="navbar-brand" href="#myPage">Orvx Tool</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -238,23 +238,24 @@
 <div id="about" class="container-fluid bg-grey">
   <div class="row">
     <div class="col-sm-6 col-md-5">
-      <h2>Enter input 1</h2><br>
+      <h2>Website 1</h2><br>
      
       <input type="text" class="form-control" >
     </div>
      <div class="col-sm-6 col-md-5">
-      <h2>Enter input 2</h2><br>
+      <h2>Website 2</h2><br>
      
      <input type="text" class="form-control" >
     </div>
    
   </div>
    <div class="row">
-    <div class="col-sm-12 col-md-12"><br><br><button class="btn btn-default btn-lg" ng-click="demoFunc()">Execute</button></div>
+    <div class="col-sm-12 col-md-12"><br><br><div class="col-sm-4 col-md-4"></div><div class="col-sm-4 col-md-4"><button class="btn btn-default btn-lg" ng-click="demoFunc()" style="width:150px;">Execute</button></div><div class="col-sm-4 col-md-4"></div></div>
     </div>
     </br>
-    <h4 ng-show="seeresult">Execute to proceed.</h4>
- <button class="btn btn-default btn-lg" ng-show="proceed" ng-click="executePythonfile()">Proceed</button>
+     <div class="col-sm-12 col-md-12"><br><br><div class="col-sm-4 col-md-4"></div><div class="col-sm-4 col-md-4"><button class="btn btn-default btn-lg" ng-show="proceed" ng-click="executePythonfile()" style="width:150px;">Show report</button></div><div class="col-sm-4 col-md-4"></div></div>
+  
+ 
 </div>
 
 <script>
